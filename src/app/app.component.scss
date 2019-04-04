@@ -1,0 +1,12 @@
+
+.canvas{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  .canvas__content{
+    margin: auto;
+  }
+}

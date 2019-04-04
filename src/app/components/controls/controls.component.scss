@@ -1,0 +1,46 @@
+.controls{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #7a1c72;
+  border-radius: 0 0 0 35px;
+  width: 200px;
+  z-index: 3;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  h4{
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    text-align: right;
+    border-bottom: 1px solid white;
+    padding: 0px 0px 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+  >ul{
+    padding: 0;
+    list-style: none;
+    color: white;
+    >li{
+      display: inline-block;
+      cursor: pointer;
+      width: 100%;
+      margin: 5px 0px;
+      text-align: right;
+      box-sizing: border-box;
+      font-size: 16px;
+      >span,>i{
+        font-weight: 300;
+        font-size: 14px;
+      }
+      >span{
+        font-family: 'Roboto Slab', serif;
+      }
+      i{
+        margin-left: 5px;
+      }
+    }
+  }
+}

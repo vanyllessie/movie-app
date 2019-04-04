@@ -1,0 +1,39 @@
+<div class="{{ 'movie movie--color-' + canvasId(indexAlbum) }}" id="{{'movie-' + indexAlbum}}" [ngClass]="[movie.isActive ? 'movie--active' : '' , indexAlbum % this.canvasGrid != 0 && indexAlbum % this.canvasGrid % 2 == 0 ? 'movie--mosaic' : '' ]" >
+  <div class="movie__bg">
+    <img src='{{"../../../assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
+  </div>
+  <div class="movie__content">
+    <header class="movie__header">
+      <span class="movie__stars">
+        <i *ngFor="let star of [0,0,0,0,0]; index as i" [ngClass]="store.calcAlbumStarsAverage(movie) > i ? 'fas fa-star': 'far fa-star' "></i>
+          <span>{{store.calcAlbumStarsAverage(movie)}}</span>
+      </span>
+    </header>
+    <div class="movie__body">
+      <h2 class="movie__body__title">{{movie.title}}</h2>
+      <div class="movie__body__metadata">
+        <p>{{movie.director}}</p>
+        <p>{{movie.year}}</p>
+        <p>{{movie.country}}</p>
+        <p>Sales: {{store.getTotalSalesByAlbum(movie)}}</p>
+        <p>Purchases: {{store.getTotalPurchasesByAlbum(movie)}}</p>
+        <p>In Stock: {{store.getTotalPurchasesByAlbum(movie) - store.getTotalSalesByAlbum(movie)}}</p>
+      </div>
+      <img class="movie__body__img" src='{{"../../../assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
+    </div>
+    <div class="movie__comments">
+      <h3 class="movie__comments__title" (click)="toogleComments(movie)">
+        Reviews
+      </h3>
+      <div *ngIf="movie.comments.length == 0" class="movie__comments__unique">
+        <p>Sin comentarios</p>
+      </div>
+      <div *ngFor="let comment of movie.comments" class="movie__comments__unique">
+        <p>Mauris id ipsum nec justo accumsan placerat sit amet non orci.</p>
+        <span class="movie__stars">
+          <i *ngFor="let star of [0,0,0,0,0]; index as i" [ngClass]="comment.stars > i ? 'fas fa-star': 'far fa-star' "></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

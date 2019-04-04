@@ -1,0 +1,6 @@
+<div class="canvas">
+  <div class="canvas__content" [ngStyle]="{'width.px': canvasWidth}">
+      <app-controls></app-controls>
+      <app-movie *ngFor="let movie of products.albums; let i = index" [movie]="movie" [canvasGrid]="canvasGrid" [indexAlbum]="i + 1"></app-movie>
+  </div>
+</div>

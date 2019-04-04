@@ -1,0 +1,28 @@
+<nav class="controls">
+  <h4 (click)="toggleFilters()">
+    Filters
+    <i class="fas fa-filter"></i>
+  </h4>
+  <ul *ngIf="filtersVisible">
+    <li (click)="showAll()">
+      <span>All Albums </span>
+      <i class="fas fa-check-square"></i>
+    </li>
+    <li (click)="showAvailable()">
+      <span>Available </span>
+      <i class="fas fa-check-square"></i>
+    </li>
+    <li (click)="showMostCommented()">
+      <span>Most Commented </span>
+      <i class="fas fa-check-square"></i>
+    </li>
+    <li (click)="showBestRanked()">
+      <span>Best Ranked </span>
+      <i class="fas fa-check-square"></i>
+    </li>
+    <li (click)="showWorstRanked()">
+      <span>Worst Ranked </span>
+      <i class="fas fa-check-square"></i>
+    </li>
+  </ul>
+</nav>
