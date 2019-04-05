@@ -1,6 +1,6 @@
 <div class="{{ 'movie movie--color-' + canvasId(indexAlbum) }}" id="{{'movie-' + indexAlbum}}" [ngClass]="[movie.isActive ? 'movie--active' : '' , indexAlbum % this.canvasGrid != 0 && indexAlbum % this.canvasGrid % 2 == 0 ? 'movie--mosaic' : '' ]" >
   <div class="movie__bg">
-    <img src='{{"../../../assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
+    <img src='{{"assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
   </div>
   <div class="movie__content">
     <header class="movie__header">
@@ -19,7 +19,7 @@
         <p>Purchases: {{store.getTotalPurchasesByAlbum(movie)}}</p>
         <p>In Stock: {{store.getTotalPurchasesByAlbum(movie) - store.getTotalSalesByAlbum(movie)}}</p>
       </div>
-      <img class="movie__body__img" src='{{"../../../assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
+      <img class="movie__body__img" src='{{"assets/images/movies/movie-dummy-" + canvasId(indexAlbum) + ".jpg"}}'>
     </div>
     <div class="movie__comments">
       <h3 class="movie__comments__title" (click)="toogleComments(movie)">
